@@ -7,7 +7,11 @@ import * as Componente from './App.styles';
 const App = () => {
   return (
     <Componente.Container>
-      ...
+      <Componente.Area>
+        <Componente.Header>
+          Lista de Tarefas
+        </Componente.Header>
+      </Componente.Area>
     </Componente.Container>
   );
 }
