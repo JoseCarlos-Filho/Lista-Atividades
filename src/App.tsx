@@ -5,6 +5,7 @@
 import * as Componente from './App.styles';
 import { useState } from 'react';
 import { Item } from './types/item';
+import { ListItem } from './components/ListItem';
 
 const App = () => {
 
@@ -20,10 +21,13 @@ const App = () => {
           Lista de Tarefas
         </Componente.Header>
 
-        {/* Adiciona nova tarefa */}
-        {list.map((item, index)=>(
-            <div>...</div>
-        ))}
+          {/* Adiciona nova tarefa */}
+          {list.map((item, index)=>(
+            <ListItem 
+              key={index} item={item}
+            />
+              // <div>{ item.name }</div>
+          ))}
 
       </Componente.Area>
     </Componente.Container>
