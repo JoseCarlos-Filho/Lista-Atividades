@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import * as Component from './styles';
 import { Item } from '../../types/item';
 
@@ -8,7 +8,7 @@ type Props = {
 }
 export const ListItem = ({ item, onChange } : Props) => {
 
-    const [isChecked, setIsChecked] = useState(item.done);
+    // const [isChecked, setIsChecked] = useState(item.done);
 
     return (
         <Component.Container done={item.done}>
