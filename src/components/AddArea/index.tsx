@@ -17,6 +17,7 @@ export const AddArea = ({ onEnter }: Props) => {
         // console.log(e.code);
         if(e.code === 'Enter' && inputText !== '') {
             onEnter(inputText);
+            setInputText('');
         }
     }
 

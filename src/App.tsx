@@ -15,6 +15,7 @@ const App = () => {
     { id: 2, name: 'Comprar um bolo na padaria', done: true },
   ]);
 
+  // Função adiciona nova tarefa na lista
   const handleAddTask = (taskName: string) => {
     let novaLista = [...list];
     
@@ -23,6 +24,19 @@ const App = () => {
       name: taskName,
       done: false
     });
+
+    setList(novaLista);
+  }
+
+  // Função que faz a validação dos itens da lista como feitas e não feitas (true/False)
+  const handleTaskChange = (id: number, done: boolean) => {
+    let novaLista = [...list];
+    
+    for( let i in novaLista ) {
+      if( novaLista[i].id === id ) {
+        novaLista[i].done = done;
+      }
+    }
 
     setList(novaLista);
   }
@@ -41,7 +55,9 @@ const App = () => {
           {/* Lista de Itens */}
           {list.map((item, index)=>(
             <ListItem 
-              key={index} item={item}
+              key={index} 
+              item={item}
+              onChange={handleTaskChange}
             />
               // <div>{ item.name }</div>
           ))}
