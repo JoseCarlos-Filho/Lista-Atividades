@@ -15,6 +15,18 @@ const App = () => {
     { id: 2, name: 'Comprar um bolo na padaria', done: true },
   ]);
 
+  const handleAddTask = (taskName: string) => {
+    let novaLista = [...list];
+    
+    novaLista.push({ 
+      id: list.length + 1,
+      name: taskName,
+      done: false
+    });
+
+    setList(novaLista);
+  }
+
   return (
     <Componente.Container>
       <Componente.Area>
@@ -23,7 +35,7 @@ const App = () => {
         </Componente.Header>
 
           {/* Adiciona nova tarefa */}
-          <AddArea />
+          <AddArea onEnter = { handleAddTask }/>
           
           
           {/* Lista de Itens */}
