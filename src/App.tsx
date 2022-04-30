@@ -6,6 +6,7 @@ import * as Componente from './App.styles';
 import { useState } from 'react';
 import { Item } from './types/item';
 import { ListItem } from './components/ListItem';
+import { AddArea } from './components/AddArea';
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
         </Componente.Header>
 
           {/* Adiciona nova tarefa */}
+          <AddArea />
           
           
           {/* Lista de Itens */}
