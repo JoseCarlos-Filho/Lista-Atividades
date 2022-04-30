@@ -22,6 +22,9 @@ const App = () => {
         </Componente.Header>
 
           {/* Adiciona nova tarefa */}
+          
+          
+          {/* Lista de Itens */}
           {list.map((item, index)=>(
             <ListItem 
               key={index} item={item}
