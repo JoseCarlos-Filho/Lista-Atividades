@@ -29,6 +29,16 @@ export const Container = styled.div(({ done }: ContainerProps) =>(
         margin-right: 5px;
     }
 
+    button {
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 
     label { 
         color: #CCC;

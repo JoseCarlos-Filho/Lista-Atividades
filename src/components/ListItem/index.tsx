@@ -19,7 +19,11 @@ export const ListItem = ({ item, onChange } : Props) => {
                 checked={item.done}
                 onChange={e => onChange(item.id, e.target.checked)}    
             />
+            <button
+                className="btn-Excluir" 
+                >❌</button>
             <label>{ item.name }</label>
+            
         </Component.Container>
     );
 }
