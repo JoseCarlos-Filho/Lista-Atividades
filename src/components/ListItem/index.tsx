@@ -5,8 +5,9 @@ import { Item } from '../../types/item';
 type Props = {
     item: Item
     onChange: (id: number, done: boolean) => void
+    onDelete: (id: number) => void
 }
-export const ListItem = ({ item, onChange } : Props) => {
+export const ListItem = ({ item, onChange, onDelete } : Props) => {
 
     // const [isChecked, setIsChecked] = useState(item.done);
 
@@ -21,6 +22,7 @@ export const ListItem = ({ item, onChange } : Props) => {
             />
             <button
                 className="btn-Excluir" 
+                onClick = {() => onDelete(item.id)}
                 >❌</button>
             <label>{ item.name }</label>
             

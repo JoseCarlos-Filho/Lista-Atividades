@@ -42,6 +42,12 @@ const App = () => {
     setList(novaLista);
   }
 
+  const handleTaskDelete = (id: number) => {
+    let novaLista = list.filter ((item ) => item.id !== id);
+    setList(novaLista);
+
+  }
+
   return (
     <Componente.Container>
       <Componente.Area>
@@ -59,6 +65,7 @@ const App = () => {
               key={index} 
               item={item}
               onChange={handleTaskChange}
+              onDelete={handleTaskDelete}
             />
               // <div>{ item.name }</div>
           ))}
